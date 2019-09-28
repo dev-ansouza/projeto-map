@@ -10,6 +10,9 @@
          * element that contains the map. */
         #map {
             height: 100%;
+            width: 50%;
+            position: center;
+            margin-left: auto;
         }
         /* Optional: Makes the sample page fill the window. */
         html, body {
@@ -17,10 +20,102 @@
             margin: 0;
             padding: 0;
         }
+
+        #conteudo-left{
+            /*Novamente definimos a largura da div*/
+            width:50%;
+            /* altura da div */
+            height:100%;
+            /* O atributo Float é utilizado para fazermos o nosso bloco(div)
+            literalmente flutue e se posicione onde queremos na página,
+            quando escolhemos left, dizemos que esse bloco irá se posicionar na
+            parte esquerda da página */
+            float:left;
+            /* Cor de fundo da div */
+            background-color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
     </style>
 
 </head>
 <body>
+
+
+    <div id="conteudo-left" background="../images/cachorro-gato-background.jpg">
+
+        <ul>
+            <li><a href="searchpet.html" class="active bg-success" style="color: white">Search Pet Home</a></li>
+            <li><a href="findpet.html">Ache seu pet agora!</a></li>
+            <li><a href="">Sobre o aplicativo</a></li>
+        </ul>
+
+        <div class="col-sm-12" style="margin-top: 100px">
+
+            <form style="color: #ffffff;">
+
+                <div class="col-sm-12 form-group">
+
+                    <div class="form-group">
+
+                        <div>
+                            <label for="dt_inicio">Data de inicio</label>
+                            <input type="date" class="form-control" id="dt_inicio" placeholder="Data de início">
+
+                            <label for="dt_termino">Data de término</label>
+                            <input type="date" class="form-control" id="dt_termino" placeholder="Data de término">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label for="tipo_pet">Selecione seu pet</label>
+                        <select class="form-control m-b-sm">
+                            <option value="0">Selecione seu pet</option>
+                            <option value="1">Cachorro</option>
+                            <option value="2">Gato</option>
+                            <option value="3">Pássaro</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary pull-right" style="margin-top: 30px;">
+                        Procurar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
     <div id="map"></div>
 
