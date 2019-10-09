@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/07/2017 às 17:26
+-- Tempo de geração: 12/07/2019 às 17:26
 -- Versão do servidor: 5.7.14
 -- Versão do PHP: 7.0.10
 
@@ -32,14 +32,16 @@ CREATE TABLE `markers` (
   `address` varchar(80) NOT NULL,
   `lat` float(10,6) NOT NULL,
   `lng` float(10,6) NOT NULL,
-  `type` varchar(30) NOT NULL
+  `tipo_pet` int(11) NOT NULL
+  'dt-inicio' datetime() NOT NULL
+  'dt-fim' datetime() NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Fazendo dump de dados para tabela `markers`
 --
 
-INSERT INTO `markers` (`id`, `name`, `address`, `lat`, `lng`, `type`) VALUES
+INSERT INTO `markers` (`id`, `name`, `address`, `lat`, `lng`, `tipo_pet`) VALUES
 (1, 'map - Matriz', '5550 Avenida Republica Argentina, Curitiba', -25.494970, -49.294357, 'EducaÃ§Ã£o'),
 (2, 'map - Filial 1', '1610 Av. Carlos Gomes, Porto Alegre', -30.034855, -51.177143, 'EducaÃ§Ã£o'),
 (3, 'map - Filial 2', '575 Avenida Paulista, SÃ£o Paulo', -23.568130, -46.649166, 'EducaÃ§Ã£o');

@@ -79,7 +79,7 @@
 
         <div class="col-sm-12" style="margin-top: 100px">
 
-            <form style="color: #ffffff;">
+            <form action="resultado.php" method="post" style="color: #ffffff;">
 
                 <div class="col-sm-12 form-group">
 
@@ -87,21 +87,20 @@
 
                         <div>
                             <label for="dt_inicio">Data de inicio</label>
-                            <input type="date" class="form-control" id="dt_inicio" placeholder="Data de início">
+                            <input type="date" class="form-control" name="dt_inicio" id="dt_inicio" placeholder="Data de início">
 
                             <label for="dt_termino">Data de término</label>
-                            <input type="date" class="form-control" id="dt_termino" placeholder="Data de término">
+                            <input type="date" class="form-control" name="dt_termino" id="dt_termino" placeholder="Data de término">
                         </div>
 
                     </div>
 
                     <div>
                         <label for="tipo_pet">Selecione seu pet</label>
-                        <select class="form-control m-b-sm">
+                        <select class="form-control m-b-sm" name="tipo_pet">
                             <option value="0">Selecione seu pet</option>
                             <option value="1">Cachorro</option>
                             <option value="2">Gato</option>
-                            <option value="3">Pássaro</option>
                         </select>
                     </div>
 
@@ -192,7 +191,7 @@
         function doNothing() {}
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCDkIVJA75KIO230-wAq3CUhq46Z2nMZg&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhNO2198aF5pz8-W5n3il67c3Hj0tB22I&callback=initMap">
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
