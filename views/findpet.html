@@ -101,7 +101,6 @@
                             <option value="0">Selecione seu pet</option>
                             <option value="1">Cachorro</option>
                             <option value="2">Gato</option>
-                            <option value="3">Pássaro</option>
                         </select>
                     </div>
 
@@ -143,19 +142,21 @@
                 Array.prototype.forEach.call(markers, function(markerElem) {
                     var name = markerElem.getAttribute('name');
                     var address = markerElem.getAttribute('address');
-                    var type = markerElem.getAttribute('type');
+                    var type = markerElem.getAttribute('tipo_pet');
                     var point = new google.maps.LatLng(
                         parseFloat(markerElem.getAttribute('lat')),
                         parseFloat(markerElem.getAttribute('lng')));
 
+                    console.log('iu');return
+
                     var infowincontent = document.createElement('div');
                     var strong = document.createElement('strong');
-                    strong.textContent = name
+                    strong.textContent = name;
                     infowincontent.appendChild(strong);
                     infowincontent.appendChild(document.createElement('br'));
 
                     var text = document.createElement('text');
-                    text.textContent = address
+                    text.textContent = address;
                     infowincontent.appendChild(text);
                     var icon = customLabel[type] || {};
                     var marker = new google.maps.Marker({
@@ -192,7 +193,7 @@
         function doNothing() {}
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCDkIVJA75KIO230-wAq3CUhq46Z2nMZg&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3KEQxSlxXAns4ImDZUfwNDnnl7QPTExk&callback=initMap">
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

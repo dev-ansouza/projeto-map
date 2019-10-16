@@ -10,8 +10,13 @@ function parseToXML($htmlStr){
 	return $xmlStr;
 }
 
+//$tipo_pet = mysqli_real_escape_string($conn, $_POST['tipo_pet']);
+
+//print_r($tipo_pet);die;
+
 // Select all the rows in the markers table
-$result_markers = "SELECT * FROM markers";
+//$result_markers = "SELECT * FROM markers";
+$result_markers = "SELECT * FROM markers WHERE tipo_pet = '1'";
 $resultado_markers = mysqli_query($conn, $result_markers);
 
 header("Content-type: text/xml");
@@ -27,7 +32,7 @@ while ($row_markers = mysqli_fetch_assoc($resultado_markers)){
   echo 'address="' . parseToXML($row_markers['address']) . '" ';
   echo 'lat="' . $row_markers['lat'] . '" ';
   echo 'lng="' . $row_markers['lng'] . '" ';
-  echo 'type="' . $row_markers['type'] . '" ';
+  echo 'type="' . $row_markers['tipo_pet'] . '" ';
   echo '/>';
 }
 
